@@ -11,7 +11,7 @@ export const api = createApi({
     "Sales",
     "Admins",
     "Performance",
-    "Dashboard"
+    "Dashboard",
   ],
   endpoints: (build) => ({
     getUser: build.query({
@@ -44,16 +44,16 @@ export const api = createApi({
     }),
     getAdmins: build.query({
       query: () => "management/admins",
-      providesTags: ["Admins"]
+      providesTags: ["Admins"],
     }),
     getUserPerformance: build.query({
-      query: (id)  => `management/performance/${id}`,
-      providesTags: ["Performance"]
+      query: (id) => `management/performance/${id}`,
+      providesTags: ["Performance"],
     }),
     getDashboard: build.query({
       query: () => "general/dashboard",
-      providesTags: ["Dashboard"]
-    })
+      providesTags: ["Dashboard"],
+    }),
   }),
 });
 
@@ -68,3 +68,5 @@ export const {
   useGetUserPerformanceQuery,
   useGetDashboardQuery,
 } = api;
+
+/// solve the errors
